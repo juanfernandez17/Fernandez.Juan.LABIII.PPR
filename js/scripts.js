@@ -260,3 +260,17 @@ function verificarAtaquesSeleccionados(container){
     ataquesStr = ataques.toString();
     return ataquesStr;
 }
+
+/*
+function abrirDialogo() {
+    let dialogo = document.getElementById("dialog");
+    dialogo.style.display = "flex";
+  }
+  
+  function cerrarDialogo() {
+    let dialogo = document.getElementById("dialog");
+    dialogo.style.display = "none";
+  }
+  
+  
+  */
