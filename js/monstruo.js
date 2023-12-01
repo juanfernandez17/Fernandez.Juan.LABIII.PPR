@@ -1,12 +1,13 @@
 import {Personaje} from "./personaje.js";
 
 export class Monstruo extends Personaje{
-    constructor(id, nombre, tipo, alias, miedo, defensa, ataque)
+    constructor(id, nombre, tipo, alias, miedo, defensa, ataque, revive)
     {
         super(id, nombre, tipo);
         this.alias = alias;
         this.miedo = miedo;
         this.defensa = defensa;
         this.ataque = ataque;
+        this.revive = revive;
     }
 }

@@ -127,7 +127,7 @@ $formulario.addEventListener("submit", (e) =>{
     
     e.preventDefault();
     
-    const {txtId, txtNombre, txtAlias, rdoDefensa, rangeMiedo, opciones, cboxAtaque} = $formulario;
+    const {txtId, txtNombre, txtAlias, rdoDefensa, rangeMiedo, opciones, cboxAtaque, rdoRevivir} = $formulario;
     
     if(!validarDatosIngresados(txtNombre.value, txtAlias.value)){
         window.alert("Error! Debe ingresar un nombre y alias para el monstruo");
@@ -138,7 +138,7 @@ $formulario.addEventListener("submit", (e) =>{
 
             let ataque = verificarAtaquesSeleccionados($fieldsetAtaques);            
                             
-            const newMonster = new Monstruo(Date.now(), txtNombre.value, opciones.value, txtAlias.value, parseInt(rangeMiedo.value), rdoDefensa.value, ataque);
+            const newMonster = new Monstruo(Date.now(), txtNombre.value, opciones.value, txtAlias.value, parseInt(rangeMiedo.value), rdoDefensa.value, ataque, rdoRevivir.value);
             
             handlerCreate(newMonster);     
         }
@@ -147,7 +147,7 @@ $formulario.addEventListener("submit", (e) =>{
             if($btnGuardar.value === "Modificar")
             {
                 let ataque = verificarAtaquesSeleccionados($fieldsetAtaques);      
-                const updatedMonster = new Monstruo(txtId.value, txtNombre.value, opciones.value, txtAlias.value, parseInt(rangeMiedo.value), rdoDefensa.value, ataque);                
+                const updatedMonster = new Monstruo(txtId.value, txtNombre.value, opciones.value, txtAlias.value, parseInt(rangeMiedo.value), rdoDefensa.value, ataque, rdoRevivir.value);                
                 handlerUpdate(updatedMonster);        
             }        
         }
@@ -224,6 +224,7 @@ function fillForm(form, monster){
     form.rdoDefensa.value = monster.defensa;
     form.opciones.value = monster.tipo;
     form.rangeMiedo.value = monster.miedo;
+    form.rdoRevivir.value = monster.revive;
 }
 
 // Rellena el select "Tipos" con los valores que se encuentran en el localStorage
@@ -261,6 +262,8 @@ function verificarAtaquesSeleccionados(container){
     ataquesStr = ataques.toString();
     return ataquesStr;
 }
+
+ 
 
 /*
 function abrirDialogo() {

@@ -73,11 +73,17 @@
                     <input type="checkbox" name="cboxAtaque" value="Sangre" checked />Sangre
                     <input type="checkbox" name="cboxAtaque" value="Comer cerebro" checked />Comer cerebro
                 </fieldset>
+
+                <fieldset>                    
+                    <legend>
+                        <img src="./assets/favicon.ico" alt=""> 
+                        ¿Habilidad para revivir?
+                    </legend>
+                    <input type="radio" name="rdoRevivir" value="si" checked>Si
+                    <input type="radio" name="rdoRevivir" value="no">No                  
+                </fieldset>                
                 
-                <section class="botones-crud">
-                    <!--<button id="btnGuardar">
-                        <img src="./assets/Save_37110.ico" alt="">Guardar
-                    </button>-->
+                <section class="botones-crud">                    
                     <input id="btnGuardar" type="submit" value="Guardar"/>
                     <input id="btnEliminar" type="button" value="Eliminar"/>
                     <input id="btnCancelar"type="button" value="Cancelar">
@@ -105,24 +111,13 @@
                 <input type="checkbox" name="cboxTipo" value="Zombie" checked />Zombie
                 <input type="checkbox" name="cboxTipo" value="Fantasma" checked />Fantasma
                 <input type="checkbox" name="cboxTipo" value="Bruja" checked />Bruja
-                <input type="checkbox" name="cboxTipo" value="Hombre Lobo" checked />Hombre Lobo
-                <!--<input type="radio" name="rdoTipo" value="Todos" checked>Todos
-                <input type="radio" name="rdoTipo" value="Vampiro">Vampiro
-                <input type="radio" name="rdoTipo" value="Esqueleto">Esqueleto
-                <input type="radio" name="rdoTipo" value="Zombie">Zombie
-                <input type="radio" name="rdoTipo" value="Fantasma">Fantasma 
-                <input type="radio" name="rdoTipo" value="Bruja">Bruja
-                <input type="radio" name="rdoTipo" value="Hombre Lobo">Hombre Lobo */      -->
+                <input type="checkbox" name="cboxTipo" value="Hombre Lobo" checked />Hombre Lobo                
             </fieldset>            
             <fieldset id="fieldset-defensa">
                 <legend>
                     <img src="./assets/data_filter_filter_tunnel_data_research_data_analysis_icon_190635.ico" alt="">
                     Defensa
-                </legend>
-                <!--<input type="checkbox" name="cboxDefensa" value="Poción" checked />Poción
-                <input type="checkbox" name="cboxDefensa" value="Crucifijo" checked />Crucifijo
-                <input type="checkbox" name="cboxDefensa" value="Estaca" checked />Estaca
-                <input type="checkbox" name="cboxDefensa" value="Plata" checked />Plata-->
+                </legend>             
                 <input type="radio" name="rdoDefensa" value="Todos" checked>Todos
                 <input type="radio" name="rdoDefensa" value="Poción">Poción
                 <input type="radio" name="rdoDefensa" value="Crucifijo">Crucifijo
@@ -146,13 +141,13 @@
             <div class="tabla-monstruos"id="tabla"></div>
 
         </section>
-        <!--<div id="dialog" class="dialog">
+        <div id="dialog" class="dialog">
             <div class="dialog-contenido">
               <p id="accionDialog"></p>
               <button id="btnAceptarDialog">Aceptar</button>
               <button id="btnCancelarDialog">Cancelar</button>
             </div>
-        </div>-->
+        </div>
     </main>
     <footer class="footer-index">
         <nav class="nav-footer-index">
