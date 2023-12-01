@@ -80,8 +80,7 @@ window.addEventListener("click", (e) =>{
     }
     else if(e.target.matches("input[value='Eliminar']"))
     {                      
-        const id = parseInt($formulario.txtId.value);    
-                                
+        const id = parseInt($formulario.txtId.value);           
         handlerDelete(id);       
         $btnEliminar.style.display = "none";
         $btnGuardar.value = "Guardar";
@@ -262,19 +261,3 @@ function verificarAtaquesSeleccionados(container){
     ataquesStr = ataques.toString();
     return ataquesStr;
 }
-
- 
-
-/*
-function abrirDialogo() {
-    let dialogo = document.getElementById("dialog");
-    dialogo.style.display = "flex";
-  }
-  
-  function cerrarDialogo() {
-    let dialogo = document.getElementById("dialog");
-    dialogo.style.display = "none";
-  }
-  
-  
-  */

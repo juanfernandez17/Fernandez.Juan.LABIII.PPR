@@ -18,7 +18,7 @@ body{
 
 }
 
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 576px) {
     .header-index>img {
       display: none;
     }
@@ -350,7 +350,7 @@ article>ul>img{
     position: relative;
   }
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 576px) {
 .nav-index>ul {
         display: flex;
         flex-direction: column;
@@ -359,8 +359,9 @@ article>ul>img{
     }
 }
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 576px) {
     .footer-index{
         display: none;
     }
 }
+
