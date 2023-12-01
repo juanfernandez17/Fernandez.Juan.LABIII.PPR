@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="./js/scripts.js" type="module" defer></script>
+    <link rel="stylesheet" href="./css/estilos.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css">
+    <link href="https://fonts.cdnfonts.com/css/zombie-control" rel="stylesheet">
+    <link rel="icon" href="./assets//halloween48_109152.ico" type="image/x-icon">
+    <title>Monstruos</title>
+</head>
+<body>
+    <header class="header-index">
+        <img src="./assets/logo1-removebg-preview.png" alt="">
+        <h2>CRUD MONSTRUOS</h2>
+        
+    </header>
+    <nav class="nav-index">
+        <ul>
+            <li><a href="./index.html">Home</a></li>
+            <li><a href="./monstruos.html">Monsters</a></li>
+            <li><a href="#">Blog</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>      
+    </nav>              
+    <main class="main-index">
+
+        <dialog id="newDialog">
+            <p id="pDialogAccion">
+
+            </p>
+            <button id="btnConfirmDialog">Confirmar</button>
+            <button id="btnCancelDialog">Cancelar</button>
+          </dialog>
+        <h3 id="detalleAccion"></h3>
+        <section class="seccion-formulario">
+            
+            <form id="formCRUD"action="" class="formulario-index">
+                <p>
+                    <img src="./assets/grim_reaper_halloween_icon_155995.ico" alt="">
+                    Nombre                                        
+                </p>
+                <input type="text" name="txtNombre" placeholder="Ingresar nombre" autocomplete="off">
+                <p>
+                    <img src="./assets/halloween42_109167.ico" alt="">
+                    Alias                    
+                </p>
+                <input type="text" name="txtAlias" placeholder="Ingresar alias" autocomplete="off">
+                <fieldset>                    
+                    <legend>
+                        <img src="./assets/favicon.ico" alt=""> 
+                        Defensa
+                    </legend>
+                    <input type="radio" name="rdoDefensa" value="Poción" checked>Pocion
+                    <input type="radio" name="rdoDefensa" value="Crucifijo">Crucifijo
+                    <input type="radio" name="rdoDefensa" value="Estaca">Estaca
+                    <input type="radio" name="rdoDefensa" value="Plata">Plata 
+                </fieldset>                  
+                <p>
+                    <img src="./assets/halloween32_109171.ico" alt="">
+                    Miedo                                    
+                </p>
+                <input type="range" name="rangeMiedo" id="">
+                <p>
+                    <img src="./assets/3792053-broom-flying-halloween-witch_109048.ico" alt="">
+                    Tipo                    
+                </p>
+                <select id="opciones" name="opciones"> </select>
+                <fieldset id="fieldset-ataques">
+                    Ataques
+                    <input type="checkbox" name="cboxAtaque" value="Garras" checked />Garras
+                    <input type="checkbox" name="cboxAtaque" value="Sangre" checked />Sangre
+                    <input type="checkbox" name="cboxAtaque" value="Comer cerebro" checked />Comer cerebro
+                </fieldset>
+                
+                <section class="botones-crud">
+                    <!--<button id="btnGuardar">
+                        <img src="./assets/Save_37110.ico" alt="">Guardar
+                    </button>-->
+                    <input id="btnGuardar" type="submit" value="Guardar"/>
+                    <input id="btnEliminar" type="button" value="Eliminar"/>
+                    <input id="btnCancelar"type="button" value="Cancelar">
+                    <input type="hidden" name="txtId"/>
+                </section>                
+            </form>        
+            <section id="loader-section">            
+                <img id="loader" src="./assets/loader.gif" alt="loader fantasma" class="oculto">
+                
+            </section>
+        </section>
+        <section class="section-ordenamiento">
+            <h4>Ordenar por</h4>
+            <select name="ordenamiento" id="opcionesOrdenamiento" ></select>
+        </section>
+        <section class="section-filtrar">
+            
+            <fieldset id="fieldset-tipos">
+                <legend>
+                    <img src="./assets/data_filter_filter_tunnel_data_research_data_analysis_icon_190635.ico" alt="">
+                    Tipo
+                </legend>
+                <input type="checkbox" name="cboxTipo" value="Vampiro" checked />Vampiro
+                <input type="checkbox" name="cboxTipo" value="Esqueleto" checked />Esqueleto
+                <input type="checkbox" name="cboxTipo" value="Zombie" checked />Zombie
+                <input type="checkbox" name="cboxTipo" value="Fantasma" checked />Fantasma
+                <input type="checkbox" name="cboxTipo" value="Bruja" checked />Bruja
+                <input type="checkbox" name="cboxTipo" value="Hombre Lobo" checked />Hombre Lobo
+                <!--<input type="radio" name="rdoTipo" value="Todos" checked>Todos
+                <input type="radio" name="rdoTipo" value="Vampiro">Vampiro
+                <input type="radio" name="rdoTipo" value="Esqueleto">Esqueleto
+                <input type="radio" name="rdoTipo" value="Zombie">Zombie
+                <input type="radio" name="rdoTipo" value="Fantasma">Fantasma 
+                <input type="radio" name="rdoTipo" value="Bruja">Bruja
+                <input type="radio" name="rdoTipo" value="Hombre Lobo">Hombre Lobo */      -->
+            </fieldset>            
+            <fieldset id="fieldset-defensa">
+                <legend>
+                    <img src="./assets/data_filter_filter_tunnel_data_research_data_analysis_icon_190635.ico" alt="">
+                    Defensa
+                </legend>
+                <!--<input type="checkbox" name="cboxDefensa" value="Poción" checked />Poción
+                <input type="checkbox" name="cboxDefensa" value="Crucifijo" checked />Crucifijo
+                <input type="checkbox" name="cboxDefensa" value="Estaca" checked />Estaca
+                <input type="checkbox" name="cboxDefensa" value="Plata" checked />Plata-->
+                <input type="radio" name="rdoDefensa" value="Todos" checked>Todos
+                <input type="radio" name="rdoDefensa" value="Poción">Poción
+                <input type="radio" name="rdoDefensa" value="Crucifijo">Crucifijo
+                <input type="radio" name="rdoDefensa" value="Estaca">Estaca
+                <input type="radio" name="rdoDefensa" value="Plata">Plata 
+            </fieldset>
+            <fieldset id="fieldset-miedo">
+                <legend>
+                    <img src="./assets/data_filter_filter_tunnel_data_research_data_analysis_icon_190635.ico" alt="">
+                    Miedo
+                </legend>
+                Miedo minimo
+                <input type="number" id="miedo-min" min="0" max="100" value="0">
+                Miedo maximo
+                <input type="number" id="miedo-max" min="0" max="100" value="100">
+                <button id="btnRestaurarMiedo">Restaurar miedo</button>
+            </fieldset>
+        </section>
+        <section class="seccion-tabla">
+            <H3>LISTA MONSTRUOS</H3>
+            <div class="tabla-monstruos"id="tabla"></div>
+
+        </section>
+      
+    </main>
+    <footer class="footer-index">
+        <nav class="nav-footer-index">
+            <ul>
+                <li><a href="./index.html">Home</a></li>
+                <li><a href="./monstruos.html">Monsters</a></li>
+                <li><a href="#">Blog</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>  
+            <p>Laboratorio III - Todos los derechos reservados 2023 ©</p>
+        </nav>         
+    </footer>
+</body>
+</html>

@@ -1,0 +1,333 @@
+*{
+    margin: 0;
+    padding: 0;  
+    box-sizing: border-box;
+    font-family: 'Zombie Control', sans-serif; 
+}
+
+body{          
+    background-image: url("../assets/ghosts-and-pumpkins-halloween-art.jpg");
+    background-size:cover;
+}
+
+.header-index>img{
+    height: 100px;
+    width: 100px;
+    left: 0;
+    position: absolute;
+
+}
+
+@media screen and (max-width: 700px) {
+    .header-index>img {
+      display: none;
+    }
+}
+
+.header-index>h1,h2{
+    text-align: center;
+    font-size: 60px;
+}
+
+
+.seccion-tabla{
+    width: 700px;
+    margin-bottom: 40px;
+}
+
+.tabla-monstruos{
+    width: 100%;
+}
+table{
+    width: 100%;
+    border-collapse: collapse;
+    margin: 0 auto;
+    background-color: rgb(215,217,253);
+    border-radius: 10px;
+}
+
+th, td{
+    border: 1px;
+    border-style: solid;
+    border-color: black ;
+
+    padding: 5px 10px; 
+}
+
+td{
+    text-align: right;
+}
+
+th{
+    text-transform: capitalize;
+    background-color: rgb(152,251,152);   
+}
+
+.header-index{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url("../assets/Colorful\ Cute\ Halloween\ Illustration\ Pattern\ Desktop\ Wallpaper.png");
+    height: 100px;
+    color:rgb(152,251,152);
+    font-size: 30px;
+    text-align: center;
+}
+
+.nav-index{
+    background-color:rgb(127,131,220);    
+}
+
+.nav-index ul{
+    display: flex;
+    justify-content: space-around;
+    list-style-type: none;
+    font-size: large;       
+}
+
+a:visited{
+    color:black;
+}
+
+a:hover{
+    color: rgb(152,251,152);
+}
+
+a{
+    text-decoration: none;
+}
+
+.footer-index{
+    background-color: rgb(127,131,220);
+    position: fixed;
+    bottom: 0;
+    width: 100%;    
+}
+
+.nav-footer-index{   
+    justify-content: space-around; 
+}
+
+.nav-footer-index>ul{   
+    display: flex;   
+    margin-right: 500px;
+}
+
+.nav-footer-index>ul>li{
+    margin-left: 50px;
+    list-style-type: none;
+    font-size: large;    
+}
+
+.nav-footer-index>p{
+    font-size: large;    
+    text-align: right;
+    margin-top: -18px;
+}
+
+.seccion-formulario, .seccion-tabla{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+tr:hover{
+    background-color: rgb(127,131,220);
+    cursor:pointer;
+}
+
+
+
+#loader-section{
+
+    margin: 50px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent;
+    margin-bottom: 100px;
+}
+
+.oculto
+{
+    display: none;
+}
+
+.main-index{
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.seccion-formulario{
+    width: 500px;
+    height: 500px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 20px;   
+    background-color: rgb(127,131,220);    
+    margin-bottom: 100PX;
+}
+
+.formulario-index>p{
+    display: flex;
+    font-size: 20px;
+    margin-left: 50px;
+    
+}
+
+.formulario-index>p>img{
+    width: 30px;
+    height: 30px;
+}
+
+.formulario-index>fieldset>legend>img{
+    width: 30px;
+    height: 30px;
+ }
+
+ 
+ .formulario-index>input{
+    display: flex;
+    margin-left: 50px;
+    margin-right: 50px;
+    margin-bottom: 20px; 
+    width: 400px;
+    font-size: 20px;
+ }
+
+ .formulario-index>fieldset{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    font-size: 20px;
+    width: 400px;
+    margin-left: 50px;
+ }
+ 
+ #opciones{
+    margin-left: 50px;
+    margin-right: 50px;
+    margin-bottom: 20px; 
+    width: 400px;
+    font-size: 20px;
+ }
+ 
+ .botones-crud{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    
+ }
+
+ #btnGuardar, #btnEliminar, #btnCancelar
+ {
+    margin: 30px;
+    height: 30px;
+    width: 100px;
+    text-align: center; 
+    padding-left: 10px;
+    padding-right: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+ }
+
+ .seccion-tabla>h3{
+    color: rgb(152,251,152);
+    font-size: 35px;
+    background-color: rgb(127,131,220);
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 500px;
+    text-align: center;
+ }
+
+ .main-index>h3{
+    color: rgb(152,251,152);
+    font-size: 35px;
+    background-color: rgb(127,131,220);
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 500px;
+    text-align: center;
+ }
+
+ .main-monstruos {
+    margin:auto;
+    width: 100%;
+    padding: 40px 0;
+    display: flex;
+    justify-content: center;
+}
+
+article {
+    width: 500px;
+    height: 150px;
+    border-radius: 10px;
+    padding: 20px;
+    background-color: rgb(127, 131, 220);
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    margin: 20px;
+    
+}
+article>ul{
+    list-style-type: none;
+
+}
+article>ul>li{
+    margin:5px;
+}
+
+article>ul>img{
+   width: 20px;
+   display: flex;
+}
+
+#btnGuardar{
+    border-radius: 5px;
+}
+#btnGuardar>img{
+    font-size: 20px;
+    width: 20px;
+    height: 20px;
+}
+
+#fieldset-tipos, #fieldset-defensa, #fieldset-miedo{
+    background-color: rgb(127, 131, 220);
+    margin-bottom: 10px;
+}
+
+#fieldset-miedo>legend>img{
+    height: 50px;
+    width: 50px;
+}
+
+#fieldset-defensa>legend>img{
+    height: 50px;
+    width: 50px;
+}
+
+#fieldset-tipos>legend>img{
+    height: 50px;
+    width: 50px;
+}
+
+.section-ordenamiento>h4{
+    margin-top: 40px;
+    color:white;
+}
+
+
+#fieldset-ataques{
+    display: flex;
+}
+
+
