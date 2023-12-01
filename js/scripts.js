@@ -146,7 +146,8 @@ $formulario.addEventListener("submit", (e) =>{
         {
             if($btnGuardar.value === "Modificar")
             {
-                const updatedMonster = new Monstruo(txtId.value, txtNombre.value, opciones.value, txtAlias.value, parseInt(rangeMiedo.value), rdoDefensa.value);                
+                let ataque = verificarAtaquesSeleccionados($fieldsetAtaques);      
+                const updatedMonster = new Monstruo(txtId.value, txtNombre.value, opciones.value, txtAlias.value, parseInt(rangeMiedo.value), rdoDefensa.value, ataque);                
                 handlerUpdate(updatedMonster);        
             }        
         }
